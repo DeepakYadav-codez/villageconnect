@@ -41,6 +41,24 @@ python app.py
 Open in browser:
 http://127.0.0.1:5000/
 
+
+## ✅ Day 17 - VillageConnect API (GET & POST)
+
+Today, I created a RESTful API using Flask and SQLite for the VillageConnect project. It includes:
+
+- `GET /api/services` – to fetch all services
+- `POST /api/services` – to add new services
+
+Tested both endpoints using Postman.
+
+### Sample POST JSON:
+```json
+{
+  "name": "Electricity",
+  "description": "Village electricity service"
+}
+
+
 👨‍💻 Created by
 Deepak Yadav
 Intern @ Python Developer Internship
