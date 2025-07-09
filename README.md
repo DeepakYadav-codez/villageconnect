@@ -58,6 +58,28 @@ Tested both endpoints using Postman.
   "description": "Village electricity service"
 }
 
+## ✅ Day 18 – HTML Templates & CSS Styling
+
+On Day 18, I added a user interface to the VillageConnect project:
+
+- Created `home.html` and `services.html` under the `templates/` directory.
+- Set up a `static/style.css` file for clean and centered UI styling using Flexbox.
+- Home page shows a welcome message and a link to view services.
+- Services page displays a list of all services and includes a form to add new services.
+- Ensured the layout is mobile-friendly and responsive.
+- Fully tested via browser at `http://127.0.0.1:5000/`
+
+### 📂 Project Structure (Updated)
+Villageconnect/
+├── app.py
+├── init_db.py
+├── database.db
+├── static/
+│ └── style.css
+├── templates/
+│ ├── home.html
+│ └── services.html
+└── README.md
 
 👨‍💻 Created by
 Deepak Yadav
