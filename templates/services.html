@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VillageConnect - Services</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Services</h1>
+        {% for service in services %}
+            <p><strong>{{ service[1] }}</strong> - {{ service[2] }}</p>
+        {% endfor %}
+
+        <h2>Add a New Service</h2>
+        <form method="post" action="/services">
+            <input type="text" name="name" placeholder="Service Name" required><br>
+            <textarea name="description" placeholder="Description" rows="3" required></textarea><br>
+            <input type="submit" value="Add Service">
+        </form>
+
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
