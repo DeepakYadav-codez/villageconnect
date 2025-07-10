@@ -81,6 +81,27 @@ Villageconnect/
 │ └── services.html
 └── README.md
 
+✅ Day 19 – Add Services via Web Form & POST API
+As part of Day 19 of the internship, the following features were added:
+
+🔹 Web Form Functionality
+Created a form in services.html to allow users to submit new services.
+Validated form input fields to ensure both name and description are required.
+Displayed success/error messages using Flask flash().
+
+🔹 POST API Endpoint for External Use (Tested with Postman)
+Endpoint: POST /api/services
+Function: Allows adding a new service via JSON request.
+Request Body Example:
+{
+  "name": "Healthcare",
+  "description": "Provides medical assistance and facilities to villagers"
+}
+
+{
+  "message": "✅ Service added successfully"
+}
+
 👨‍💻 Created by
 Deepak Yadav
 Intern @ Python Developer Internship
