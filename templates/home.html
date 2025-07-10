@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VillageConnect - Home</title>
-    <link rel="stylesheet" href="/static/style.css">
+  <title>VillageConnect - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>🌾 Welcome to VillageConnect</h1>
-        <p>Your digital gateway to village services.</p>
-        <a href="/services">Go to Services</a>
+  <div class="container">
+    <h1>🌾 Welcome to VillageConnect</h1>
+    <p>Your digital gateway to village services.</p>
+
+    <!-- Stylish Link Box -->
+    <div class="link-box">
+      <a href="/services">🔗 Go to Services</a>
     </div>
+  </div>
 </body>
 </html>
