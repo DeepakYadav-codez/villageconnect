@@ -1,3 +1,4 @@
+/* Global body style */
 body {
   background-color: #f2f2f2;
   font-family: 'Segoe UI', sans-serif;
@@ -9,19 +10,21 @@ body {
   min-height: 100vh;
 }
 
+/* Main container box */
 .container {
-  background-color: white;
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 600px;
+  max-width: 650px;
   width: 90%;
   text-align: center;
 }
 
+/* Headings */
 h1 {
   color: #2c8b5e;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -29,30 +32,35 @@ h2 {
   color: #333;
 }
 
+/* Service list styling */
 ul.service-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
+  text-align: left;
 }
 
 ul.service-list li {
-  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
   font-size: 16px;
-  text-align: left;
 }
 
 ul.service-list li strong {
   color: #2c8b5e;
 }
 
+/* Flash message box */
 .flash {
   background-color: #e0ffe0;
   border: 1px solid #2c8b5e;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 6px;
+  color: #2c8b5e;
 }
 
+/* Text input and textarea */
 input[type="text"], textarea {
   width: 100%;
   padding: 10px;
@@ -62,7 +70,13 @@ input[type="text"], textarea {
   box-sizing: border-box;
 }
 
-button {
+/* Search input (optional if separate style needed) */
+form[method="GET"] input[type="text"] {
+  width: 80%;
+}
+
+/* Buttons */
+button, input[type="submit"] {
   padding: 10px 20px;
   background-color: #2c8b5e;
   color: white;
@@ -70,42 +84,23 @@ button {
   border-radius: 6px;
   font-size: 15px;
   cursor: pointer;
+  margin-top: 10px;
   transition: background 0.3s;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   background-color: #246a49;
 }
 
+/* Back link */
 a.back-link {
   display: inline-block;
   margin-top: 20px;
   color: #007bff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a.back-link:hover {
-  text-decoration: underline;
-}
-
-.link-box {
-  border: 2px solid #6a1b9a;
-  background-color: #f3e5f5;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(106, 27, 154, 0.2);
-}
-
-.link-box a {
-  text-decoration: none;
-  color: #4a148c;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.link-box a:hover {
-  color: #311b92;
   text-decoration: underline;
 }

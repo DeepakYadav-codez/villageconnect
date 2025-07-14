@@ -16,6 +16,8 @@ def home():
 @app.route("/services", methods=["GET", "POST"])
 def services():
     conn = get_db_connection()
+
+    # Add new service
     if request.method == "POST":
         name = request.form["name"].strip()
         description = request.form["description"].strip()
@@ -27,11 +29,20 @@ def services():
             conn.commit()
             flash("✅ Service added successfully!")
 
-    services = conn.execute("SELECT * FROM services").fetchall()
+    # Search filter
+    query = request.args.get("q", "").strip()
+    if query:
+        services = conn.execute(
+            "SELECT * FROM services WHERE name LIKE ? OR description LIKE ?",
+            (f"%{query}%", f"%{query}%")
+        ).fetchall()
+    else:
+        services = conn.execute("SELECT * FROM services").fetchall()
+
     conn.close()
     return render_template("services.html", services=services)
 
-# ✅ API Endpoint for Postman POST
+# Optional: API route still works
 @app.route("/api/services", methods=["POST"])
 def api_add_service():
     data = request.get_json()
