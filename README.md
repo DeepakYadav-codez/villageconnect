@@ -102,6 +102,20 @@ Request Body Example:
   "message": "✅ Service added successfully"
 }
 
+✅ Day 21 – Service Search & Display
+On Day 21 of the internship, I implemented search functionality for the services list using a GET request and SQLite queries.
+
+🔹 Features Added:
+🔍 Search bar to filter services by name or description
+🧠 Partial match support using LIKE %query% in SQLite
+🎯 Display all services with optional search filter
+✨ Search bar styled using custom CSS
+
+🔎 How to Use:
+Go to: /services
+Type in the search bar (e.g., water, electric)
+Only matching services will be shown
+
 👨‍💻 Created by
 Deepak Yadav
 Intern @ Python Developer Internship
