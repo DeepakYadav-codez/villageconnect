@@ -131,6 +131,25 @@ Added POST API endpoint /api/posts for adding posts via Postman
   "content": "There is a serious water shortage in the west area. Please act soon."
 }
 
+🚀 Day 23 – Deployed VillageConnect to Render
+Today, I successfully deployed the VillageConnect web application using Render, making it publicly accessible online!
+
+✅ What I Did
+Created render.yaml to configure deployment settings
+Added requirements.txt to list all Python/Flask dependencies
+Pushed all updates to GitHub
+Connected GitHub repo to Render and deployed it as a web service
+App is now live and tested
+
+🌐 Live Project URL
+🔗 https://villageconnect-08eb.onrender.com
+
+You can now visit the site and:
+View the homepage
+Add and view village services
+Create posts in the community forum
+
+
 
 👨‍💻 Created by
 Deepak Yadav
