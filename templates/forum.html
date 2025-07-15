@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Village Forum</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🗣️ Village Forum</h1>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Posts List -->
+    <ul class="service-list">
+      {% for post in posts %}
+        <li><strong>{{ post['title'] }}</strong> - {{ post['content'] }}</li>
+      {% else %}
+        <li>No posts yet. Be the first to post!</li>
+      {% endfor %}
+    </ul>
+
+    <!-- New Post Form -->
+    <h2>Create a New Post</h2>
+    <form method="POST" action="/forum">
+      <input type="text" name="title" placeholder="Post Title" required><br>
+      <textarea name="content" placeholder="Your thoughts..." rows="4" required></textarea><br>
+      <button type="submit">📬 Post</button>
+    </form>
+
+    <a href="/" class="back-link">← Back to Home</a>
+  </div>
+</body>
+</html>

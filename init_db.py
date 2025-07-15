@@ -1,28 +1,25 @@
 import sqlite3
 
-# Connect to database (or create if doesn't exist)
-conn = sqlite3.connect('database.db')
+conn = sqlite3.connect("database.db")
 cursor = conn.cursor()
 
-# Create services table
+# Services table
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS services (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    description TEXT
+    description TEXT NOT NULL
 )
 """)
 
-# Create users table
+# Posts table (fix: use content instead of message)
 cursor.execute("""
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS posts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    role TEXT NOT NULL  -- 'villager', 'official'
+    title TEXT NOT NULL,
+    content TEXT NOT NULL
 )
 """)
 
 conn.commit()
 conn.close()
-
-print("✅ Tables created successfully in database.db")
