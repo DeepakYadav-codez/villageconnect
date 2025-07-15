@@ -116,6 +116,22 @@ Go to: /services
 Type in the search bar (e.g., water, electric)
 Only matching services will be shown
 
+
+🗨️ Day 22 - Forum Feature & API Integration
+
+Created a forum page (/forum) for villagers to share thoughts and announcements
+Added posts table to SQLite database (title, content)
+Implemented a form to create posts with validation
+Displayed all posts dynamically on the Forum page
+Added POST API endpoint /api/posts for adding posts via Postman
+
+🧪 Sample API JSON (POST /api/posts)
+{
+  "title": "Water Shortage",
+  "content": "There is a serious water shortage in the west area. Please act soon."
+}
+
+
 👨‍💻 Created by
 Deepak Yadav
 Intern @ Python Developer Internship
